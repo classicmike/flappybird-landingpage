@@ -1,2 +1,17 @@
 body {
-  font-size: 14px; }
+  color: #232323;
+  background-color: #ececec;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+nav {
+  width: 100%;
+  background-color: #ececec; }
+  nav ul {
+    float: right; }
+  nav li {
+    width: 10%; }
+  nav a {
+    color: #1d5192;
+    text-align: center; }
+    nav a:hover {
+      color: #6095D7; }
