@@ -1,3 +1,18 @@
+.parent {
+  position: relative;
+  background: #f06d06;
+  width: 60%;
+  height: 200px;
+  margin: 20px 0; }
+
+.child {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: white;
+  padding: 20px; }
+
 body {
   color: #232323;
   background-color: #ececec;
@@ -14,4 +29,4 @@ nav {
     color: #1d5192;
     text-align: center; }
     nav a:hover {
-      color: #6095D7; }
+      color: #679de1; }
