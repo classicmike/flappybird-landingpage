@@ -1,0 +1,72 @@
+@font-face {
+  font-family: 'flappybirdyregular';
+  src: url("../fonts/flappybirdy/flappybirdy-webfont.eot");
+  src: url("../fonts/flappybirdy/flappybirdy-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/flappybirdy/flappybirdy-webfont.woff2") format("woff2"), url("../fonts/flappybirdy/flappybirdy-webfont.woff") format("woff"), url("../fonts/flappybirdy/flappybirdy-webfont.ttf") format("truetype"), url("../fonts/flappybirdy/flappybirdy-webfont.svg#flappybirdyregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+/** Import Bourbon **/
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+/** IMPORT FILES SPECIFIC TO THE PROJECT **/
+@font-face {
+  font-family: "flappybird";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/flappy-bird/flappy-bird-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/flappy-bird/flappy-bird-webfont.woff2") format("woff2"), url("../fonts/flappy-bird/flappy-bird-webfont.woff") format("woff"), url("../fonts/flappy-bird/flappy-bird-webfont.ttf") format("truetype"), url("../fonts/flappy-bird/flappy-bird-webfont.svg#flappybird") format("svg"); }
+
+/*** Variables related to font sizes ***/
+/**** Settings related to media queries ****/
+/**** Settings related to the background color ****/
+/* Light Green */
+/* Greens */
+body {
+  background-color: #ddd894; }
+
+.vertical-align {
+  display: table;
+  height: inherit;
+  width: 100%; }
+  .vertical-align .vertical-align__middle__all {
+    display: table-cell;
+    vertical-align: middle; }
+
+.hero {
+  background: url("../img/afeature-background.jpg");
+  background: url("../img/afeature-background.jpg");
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 15.625rem; }
+  .hero .hero-inner {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
+    color: #fff;
+    margin: auto;
+    padding: 3rem 1rem 3.125rem;
+    text-align: center; }
+    .hero .hero-inner::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .hero .hero-inner::after {
+      clear: both;
+      content: "";
+      display: table; }
+    .hero .hero-inner .hero-copy {
+      text-align: center; }
+      .hero .hero-inner .hero-copy .hero-title {
+        margin-bottom: 1.25rem;
+        font-family: "flappybird", "Open-Sans", sans-serif;
+        font-size: 5rem;
+        margin-top: 0;
+        font-weight: 400;
+        text-shadow: -5px -5px 0 #59363d, 5px -5px 0 #59363d, -5px 5px 0 #59363d, 5px 5px 0 #59363d;
+        text-transform: uppercase; }
