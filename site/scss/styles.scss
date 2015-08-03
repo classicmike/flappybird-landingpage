@@ -1,59 +1,7 @@
-$font-color: #232323;
-$link-color: #1d5192;
-$hover-link-color: lighten($link-color, 30%);
-$background-color: #ececec;
-
-$background-color-dark: darken($background-color, 14%);
-
-$sans-serif-font: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$serif-font: Georgia, Times, "Times New Roman", serif;
-
-
-@mixin centerer {
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-}
-
-.parent {
-	position: relative;
-	background: #f06d06;
-	width: 60%;
-	height: 200px;
-	margin: 20px 0;
-}
-
-.child {
-	@include centerer;
-	background: white;
-	padding: 20px;
-}
-
-
-
-body {
-	color: $font-color;
-	background-color: $background-color;
-	font-family: $sans-serif-font;
-}
-
-nav {
-	width: 100%;
-	background-color: $background-color;
-	ul {
-		float: right;
-	}
-	li {
-		width: 10%;
-	}
-	a {
-		color: $link-color;
-		text-align: center;
-		&:hover {
-			color: $hover-link-color;
-		}
-	}
-}
-
-
+/** Import Bourbon **/
+@import "../lib/bourbon/app/assets/stylesheets/bourbon";
+@import "../lib/neat/app/assets/stylesheets/neat";
+/** IMPORT FILES SPECIFIC TO THE PROJECT **/
+@import "fonts";
+@import "settings";
+@import "components";

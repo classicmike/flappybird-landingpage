@@ -53,7 +53,7 @@ gulp.task('scripts', function(){
 gulp.task('styles', function(){
 	gulp.src('site/css/*.css')
 	.pipe(concat('styles.css'))
-	.pipe(concat('build/css'));
+	.pipe(gulp.dest('build/css'));
 });
 
 // Image optimization task
@@ -63,8 +63,13 @@ gulp.task('images', function(){
 	.pipe(gulp.dest('build/img'));
 });
 
+gulp.task('fonts', function(){
+	gulp.src('site/fonts/*/*')
+	.pipe(gulp.dest('build/fonts'));
+});
+
 // Build Task
-gulp.task('build', ['jshint', 'sass', 'html', 'scripts', 'styles', 'images']);
+gulp.task('build', ['jshint', 'sass', 'html', 'scripts', 'styles', 'images', 'fonts']);
 
 
 

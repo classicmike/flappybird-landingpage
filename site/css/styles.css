@@ -1,32 +1,21 @@
-.parent {
-  position: relative;
-  background: #f06d06;
-  width: 60%;
-  height: 200px;
-  margin: 20px 0; }
+/** Import Bourbon **/
+html {
+  box-sizing: border-box; }
 
-.child {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
-  padding: 20px; }
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
 
-body {
-  color: #232323;
-  background-color: #ececec;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+/** IMPORT FILES SPECIFIC TO THE PROJECT **/
+@font-face {
+  font-family: "flappybirdyregular";
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/flappybirdy/flappy-birdy-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/flappybirdy/flappy-birdy-webfont.woff2") format("woff2"), url("../fonts/flappybirdy/flappy-birdy-webfont.woff") format("woff"), url("../fonts/flappybirdy/flappy-birdy-webfont.ttf") format("truetype"), url("../fonts/flappybirdy/flappy-birdy-webfont.svg#flappybirdyregular") format("svg"); }
 
-nav {
-  width: 100%;
-  background-color: #ececec; }
-  nav ul {
-    float: right; }
-  nav li {
-    width: 10%; }
-  nav a {
-    color: #1d5192;
-    text-align: center; }
-    nav a:hover {
-      color: #679de1; }
+/*** Variables related to font sizes ***/
+/**** Settings related to media queries ****/
+/**** Settings related to the background color ****/
+/* Light Green */
+/* Greens */
