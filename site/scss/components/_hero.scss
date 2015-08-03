@@ -1,0 +1,34 @@
+.hero {
+  $hero-color: #fff;
+  $hero-image: '../img/afeature-background.jpg';
+
+  @include background(url($hero-image));
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: rem(250);
+  .hero-inner {
+    @include outer-container;
+    @include clearfix;
+    color: $hero-color;
+    margin: auto;
+    padding: rem(48) 1rem rem(50);
+    text-align: center;
+    .hero-copy {
+      text-align: center;
+      .hero-title {
+        margin-bottom: 1.25rem;
+        font-family: $decorative-font-family;
+        font-size: rem(48);
+        margin-top: 0;
+        font-weight: $font-weight-normal;
+        text-shadow:
+        -5px -5px 0 $dark-orange,
+        5px -5px 0 $dark-orange,
+        -5px 5px 0 $dark-orange,
+        5px 5px 0 $dark-orange;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

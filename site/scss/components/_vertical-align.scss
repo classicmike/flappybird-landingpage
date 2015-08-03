@@ -1,0 +1,9 @@
+.vertical-align {
+  display: table;
+  height: inherit;
+  width: 100%;
+  .vertical-align__middle__all {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}

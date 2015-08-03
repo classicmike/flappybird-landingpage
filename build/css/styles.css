@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'flappybirdyregular';
+  src: url("../fonts/flappybirdy/flappybirdy-webfont.eot");
+  src: url("../fonts/flappybirdy/flappybirdy-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/flappybirdy/flappybirdy-webfont.woff2") format("woff2"), url("../fonts/flappybirdy/flappybirdy-webfont.woff") format("woff"), url("../fonts/flappybirdy/flappybirdy-webfont.ttf") format("truetype"), url("../fonts/flappybirdy/flappybirdy-webfont.svg#flappybirdyregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
 /** Import Bourbon **/
 html {
   box-sizing: border-box; }
@@ -57,8 +64,8 @@ body {
       text-align: center; }
       .hero .hero-inner .hero-copy .hero-title {
         margin-bottom: 1.25rem;
-        font-family: "Bangers", sans-serif;
-        font-size: 3rem;
+        font-family: "flappybird", "Open-Sans", sans-serif;
+        font-size: 5rem;
         margin-top: 0;
         font-weight: 400;
         text-shadow: -5px -5px 0 #59363d, 5px -5px 0 #59363d, -5px 5px 0 #59363d, 5px 5px 0 #59363d;
