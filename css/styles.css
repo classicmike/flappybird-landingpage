@@ -37,8 +37,12 @@ body {
     display: table-cell;
     vertical-align: middle; }
 
+.site-header {
+  width: 100%;
+  background-color: transparent;
+  background-color: black; }
+
 .hero {
-  background: url("../img/afeature-background.jpg");
   background: url("../img/afeature-background.jpg");
   background-position: bottom center;
   background-repeat: no-repeat;
@@ -64,8 +68,8 @@ body {
       text-align: center; }
       .hero .hero-inner .hero-copy .hero-title {
         margin-bottom: 1.25rem;
-        font-family: "flappybird", "Open-Sans", sans-serif;
-        font-size: 5rem;
+        font-family: "Bangers", sans-serif;
+        font-size: 3rem;
         margin-top: 0;
         font-weight: 400;
         text-shadow: -5px -5px 0 #59363d, 5px -5px 0 #59363d, -5px 5px 0 #59363d, 5px 5px 0 #59363d;
