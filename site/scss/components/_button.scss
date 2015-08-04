@@ -1,0 +1,12 @@
+.button {
+  @extend button;
+  font-family: $base-font-family;
+  margin: rem(20);
+  background-color: $dark-green;
+  border: 1px solid $dark-green;
+  &:hover,
+  &:focus {
+    background-color:$mid-green;
+    color: $dark-green;
+  }
+}

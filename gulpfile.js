@@ -20,7 +20,7 @@ gulp.task('jshint', function(){
 
 // Compile Sass task
 gulp.task('sass', function(){
-	return gulp.src('site/scss/*.scss')
+	return gulp.src('site/scss/**/*.scss')
 	.pipe(sass())
 	.pipe(gulp.dest('site/css'));
 });
@@ -28,7 +28,7 @@ gulp.task('sass', function(){
 // Watch task
 gulp.task('watch', function() {
     gulp.watch('site/js/*.js', ['jshint']);
-    gulp.watch('site/scss/*.scss', ['sass']);
+    gulp.watch('site/scss/**/*.scss', ['sass']);
 });
 
 // Default task
