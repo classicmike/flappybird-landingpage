@@ -1,30 +1,39 @@
 h1, h2, h3, h4, h5, h6 {
   font-weight: $font-weight-normal;
-  font-family: $flappy-font-family;
+  font-family: $heading-font-family;
+  margin-bottom: 1.25rem;
 }
 
 h1 {
-  font-size: 2.5rem;
+  font-size: 3rem;
 }
 
 h2 {
-  font-size: 2rem;
+  font-size: 2.5rem;
 }
 
 h3 {
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 h5 {
-  font-size: 0.75rem;
+  font-size: 1rem;
 }
 
 h6 {
-  font-size: 0.625rem;
+  font-size: 0.75rem;
+}
+
+p {
+  margin-bottom: 1.25rem;
+}
+
+ol, ul {
+  margin-bottom: 1.25rem;
 }
 
 

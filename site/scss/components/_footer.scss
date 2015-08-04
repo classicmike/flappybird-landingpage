@@ -1,0 +1,10 @@
+footer {
+  background-color: $dark-orange;
+  @include clearfix;
+  color: $light-orange;
+  padding: rem(40) rem(20) rem(30);
+
+  * {
+    margin-bottom: rem(10);
+  }
+}
