@@ -1,9 +1,11 @@
 .button {
   @extend button;
   font-family: $base-font-family;
-  margin: rem(20);
+  margin: 1.25rem;
   background-color: $dark-green;
   border: 1px solid $dark-green;
+  font-size: 1.25rem;
+  padding: 1rem 2.5rem;
   &:hover,
   &:focus {
     background-color:$mid-green;

@@ -2,8 +2,14 @@
   display: table;
   height: inherit;
   width: 100%;
-  .vertical-align__middle__all {
+  &.vertical-align__middle__all {
     display: table-cell;
     vertical-align: middle;
+  }
+  @include media($medium-screen-min){
+    .vertical-align__middle__medium-up {
+      display: table-cell;
+      vertical-align: middle;
+    }
   }
 }

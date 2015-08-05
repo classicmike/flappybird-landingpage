@@ -7,23 +7,33 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: rem(250);
+  padding: rem(48) 1rem rem(50);
   .hero-inner {
-    @include outer-container;
     @include clearfix;
     color: $hero-color;
     margin: auto;
-    padding: rem(48) 1rem rem(50);
     text-align: center;
-    .hero-img {
-      width: 60%;
-      margin: 0 auto;
+    height: inherit;
+    @include outer-container;
+    .hero-img-container {
+      .hero-img {
+        width: 60%;
+        margin: 0 auto;
+        max-width: 200px;
+      }
+      @include media($medium-screen-min){
+        @include span-columns(3);
+        .hero-img {
+          width: 70%;
+        }
+      }
     }
     .hero-copy {
       text-align: center;
       .hero-title {
         margin-bottom: 1.25rem;
         font-family: $decorative-font-family;
-        font-size: rem(40);
+        font-size: 3rem;
         margin-top: 0;
         font-weight: $font-weight-normal;
         text-shadow:
@@ -32,10 +42,19 @@
         -2px 2px 0 $dark-orange,
         2px 2px 0 $dark-orange;
         text-transform: uppercase;
+        @include media($medium-screen-min){
+          font-size: 4rem;
+        }
+      }
+      @include media($medium-screen-min){
+        @include span-columns(9);
+        text-align: left;
       }
     }
-    .hero-action {
-      margin-bottom: rem(28);
-    }
+
+  }
+  .hero-action {
+    width: 100%;
+    text-align: center;
   }
 }
