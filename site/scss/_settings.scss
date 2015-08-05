@@ -1,4 +1,7 @@
-$em-base: 16px;
+$em-base: 12px;
+$small-base: 14px;
+$medium-base: 16px;
+$base-font-size: $em-base;
 
 /*** Variables related to font sizes ***/
 $flappy-font-family: "flappybird", "Open-Sans", sans-serif;
@@ -11,10 +14,10 @@ $font-weight-bold: 700;
 $font-weight-light: 300;
 
 /**** Settings related to media queries ****/
-$extra-small: new-breakpoint(max-width rem(399));
-$small: new-breakpoint(min-width rem(768));
-$medium: new-breakpoint(min-width rem(960));
-$large: new-breakpoint(min-width rem(1200));
+$extra-small-screen: new-breakpoint(max-width rem(399));
+$small-screen-min: new-breakpoint(min-width rem(400));
+$medium-screen-min: new-breakpoint(min-width rem(768));
+$large-screen-min: new-breakpoint(min-width rem(960));
 
 
 /**** Settings related to the background color ****/
@@ -38,7 +41,6 @@ $white: #fff;
 $primary-color: $black;
 $secondary-color: $mid-green;
 
-$red: #f00;
 
 
 

@@ -1,5 +1,18 @@
+html {
+  font-size: $base-font-size;
+  @include media ($small-screen-min){
+    font-size: $small-base;
+  }
+  @include media($medium-screen-min){
+    font-size: $medium-base;
+  }
+}
+* {
+  font-size: 1rem;
+}
 body {
   background-color: $light-orange;
+  font-size: $base-font-size;
 }
 
 img {

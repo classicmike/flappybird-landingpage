@@ -1,13 +1,19 @@
 .section {
-  padding: rem(80) rem(16) rem(70);
+  padding: 5rem 1rem 4.375rem;
   text-align: center;
+
   border-top: 2px solid $dark-orange;
   &:first-of-type {
     border-top: 0;
   }
 
+  @include media($medium-screen-min){
+    text-align: left;
+  }
+
   .section-header {
     * {
+      text-align: center;
       font-size: 3.5rem;
       color: $white;
       text-shadow:
@@ -15,6 +21,25 @@
       2px -2px 0 $dark-orange,
       -2px 2px 0 $dark-orange,
       2px 2px 0 $dark-orange;
+      @include media($medium-screen-min){
+        text-align: center;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  .section-content {
+    .section-content-left {
+      margin-bottom: 2.5rem;
+    }
+    @include media($medium-screen-min){
+      @include outer-container;
+      .section-content-left{
+        @include span-columns(8);
+      }
+      .section-content-right {
+        @include span-columns(4);
+      }
     }
   }
 }

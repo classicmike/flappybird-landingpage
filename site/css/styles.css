@@ -216,8 +216,21 @@ picture {
 /**** Settings related to the background color ****/
 /* Light Green */
 /* Greens */
+html {
+  font-size: 12px; }
+  @media screen and (min-width: 33.33333rem) {
+    html {
+      font-size: 14px; } }
+  @media screen and (min-width: 64rem) {
+    html {
+      font-size: 16px; } }
+
+* {
+  font-size: 1rem; }
+
 body {
-  background-color: #ddd894; }
+  background-color: #ddd894;
+  font-size: 12px; }
 
 img {
   max-width: 100%;
@@ -247,7 +260,8 @@ h6 {
   font-size: 0.75rem; }
 
 p {
-  margin-bottom: 1.25rem; }
+  margin-bottom: 1.25rem;
+  font-size: 1rem; }
 
 ol, ul {
   margin-bottom: 1.25rem; }
@@ -278,7 +292,7 @@ ol, ul {
 
 .button {
   font-family: "Open-Sans", sans-serif;
-  margin: 1.25rem;
+  margin: 1.66667rem;
   background-color: #50771c;
   border: 1px solid #50771c; }
   .button:hover,
@@ -292,10 +306,43 @@ ol, ul {
   border-top: 2px solid #59363d; }
   .section:first-of-type {
     border-top: 0; }
+  @media screen and (min-width: 64rem) {
+    .section {
+      text-align: left; } }
   .section .section-header * {
+    text-align: center;
     font-size: 3.5rem;
     color: #fff;
     text-shadow: -2px -2px 0 #59363d, 2px -2px 0 #59363d, -2px 2px 0 #59363d, 2px 2px 0 #59363d; }
+    @media screen and (min-width: 64rem) {
+      .section .section-header * {
+        text-align: center;
+        margin-bottom: 3rem; } }
+  .section .section-content .section-content-left {
+    margin-bottom: 2.5rem; }
+  @media screen and (min-width: 64rem) {
+    .section .section-content {
+      max-width: 68em;
+      margin-left: auto;
+      margin-right: auto; }
+      .section .section-content::after {
+        clear: both;
+        content: "";
+        display: table; }
+      .section .section-content .section-content-left {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 65.88078%; }
+        .section .section-content .section-content-left:last-child {
+          margin-right: 0; }
+      .section .section-content .section-content-right {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%; }
+        .section .section-content .section-content-right:last-child {
+          margin-right: 0; } }
 
 .hero {
   background: url("../img/afeature-background.jpg");
@@ -303,14 +350,14 @@ ol, ul {
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 15.625rem; }
+  min-height: 20.83333rem; }
   .hero .hero-inner {
     max-width: 68em;
     margin-left: auto;
     margin-right: auto;
     color: #fff;
     margin: auto;
-    padding: 3rem 1rem 3.125rem;
+    padding: 4rem 1rem 4.16667rem;
     text-align: center; }
     .hero .hero-inner::after {
       clear: both;
@@ -328,21 +375,21 @@ ol, ul {
       .hero .hero-inner .hero-copy .hero-title {
         margin-bottom: 1.25rem;
         font-family: "Bangers", sans-serif;
-        font-size: 2.5rem;
+        font-size: 3.33333rem;
         margin-top: 0;
         font-weight: 400;
         text-shadow: -2px -2px 0 #59363d, 2px -2px 0 #59363d, -2px 2px 0 #59363d, 2px 2px 0 #59363d;
         text-transform: uppercase; }
     .hero .hero-inner .hero-action {
-      margin-bottom: 1.75rem; }
+      margin-bottom: 2.33333rem; }
 
 footer {
   background-color: #59363d;
   color: #ddd894;
-  padding: 2.5rem 1.25rem 1.875rem; }
+  padding: 3.33333rem 1.66667rem 2.5rem; }
   footer::after {
     clear: both;
     content: "";
     display: table; }
   footer * {
-    margin-bottom: 0.625rem; }
+    margin-bottom: 0.83333rem; }
