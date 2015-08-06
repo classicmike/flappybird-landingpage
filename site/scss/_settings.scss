@@ -41,6 +41,20 @@ $primary-color: $black;
 $secondary-color: $mid-green;
 
 
+$extra-small-header-height: 152px;
+$small-header-height: 116px;
+$medium-header-height: 60px;
+
+$header-extra-spacing: 20px;
+$header-large-extra-spacing: 80px;
+
+$extra-small-mobile-media-query: new-breakpoint(max-width 371px);
+$small-mobile-media-query: new-breakpoint(min-width 372px max-width 1023px);
+
+
+
+
+
 
 
 

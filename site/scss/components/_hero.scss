@@ -9,7 +9,13 @@
   background-repeat: no-repeat;
   background-size: cover;
   min-height: rem(250);
-  padding: rem(48) 1rem rem(50);
+  padding: $extra-small-header-height 1rem rem(50);
+  @include media($small-mobile-media-query){
+    padding-top: $small-header-height;
+  }
+  @include media($medium-screen-min){
+    padding-top: $header-large-extra-spacing + $medium-header-height
+  }
   .hero-inner {
     @include clearfix;
     color: $hero-color;

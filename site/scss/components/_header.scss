@@ -1,22 +1,25 @@
 header.navigation {
-  $large-screen: em(860) !default;
   $navigation-padding: 1em;
-  $navigation-color: transparentize(white, 0.3);
+  $navigation-color: $white;
   $navigation-color-hover: white;
-  $navigation-height: 60px;
+  $navigation-height: $medium-header-height;
   $navigation-nav-button-background: $action-color;
   $navigation-nav-button-border: 1px solid lighten($navigation-nav-button-background, 20%);
   $navigation-active-link-color: transparentize(white, 0.5);
-  $horizontal-bar-mode: $large-screen;
+  $horizontal-bar-mode: $medium-screen-min;
   $text-shadow: -2px -2px 0 $dark-orange,
   2px -2px 0 $dark-orange,
   -2px 2px 0 $dark-orange,
   2px 2px 0 $dark-orange;
 
-  background-color: $light-blue;
+  background-color: transparent;
   min-height: $navigation-height;
   width: 100%;
   z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   .navigation-wrapper {
     @include clearfix;
     @include outer-container;
@@ -25,10 +28,18 @@ header.navigation {
   }
 
   .logo {
-    float: left;
-    max-height: $navigation-height;
-    padding-left: $navigation-padding;
-    padding-right: 2em;
+    padding: 1.25rem $navigation-padding 0;
+    width: 100%;
+    text-align: center;
+    display: block;
+    @include clearfix;
+    @include media($horizontal-bar-mode){
+      max-height: $navigation-height;
+      float: left;
+      width: auto;
+      padding-right: 2em;
+      padding-top: 0;
+    }
     .logo-text {
       font-family: $decorative-font-family;
       color: $white;
@@ -43,29 +54,6 @@ header.navigation {
     img {
       max-height: $navigation-height;
       padding: 0.8em 0;
-    }
-  }
-
-
-  // Mobile view
-
-  .navigation-menu-button {
-    color: $navigation-color;
-    display: block;
-    float: right;
-    font-weight: 700;
-    line-height: $navigation-height;
-    margin: 0;
-    padding-right: 1em;
-    text-transform: uppercase;
-
-    @include media ($horizontal-bar-mode) {
-      display: none;
-    }
-
-    &:focus,
-    &:hover {
-      color: $navigation-color-hover;
     }
   }
 
@@ -86,21 +74,17 @@ header.navigation {
     -webkit-transform-style: preserve-3d;
     // stop webkit flicker
     clear: both;
-    display: none;
     margin: 0 auto;
     overflow: visible;
     padding: 0;
     width: 100%;
     z-index: 9999;
-
-    &.show {
-      display: block;
-    }
-
+    text-align: center;
     @include media ($horizontal-bar-mode) {
       display: inline;
       margin: 0;
       padding: 0;
+      text-align: left;
     }
   }
 
@@ -108,20 +92,17 @@ header.navigation {
   // The nav items
 
   ul li.nav-link {
-    display: block;
     line-height: $navigation-height;
     overflow: hidden;
     padding-right: 0.8em;
     text-align: right;
-    width: 100%;
+    width: auto;
     z-index: 9999;
-
+    display: inline-block;
+    background: transparent;
     @include media ($horizontal-bar-mode) {
-      background: transparent;
-      display: inline;
       line-height: $navigation-height;
       text-decoration: none;
-      width: auto;
     }
 
     a {
@@ -137,6 +118,7 @@ header.navigation {
       &:focus,
       &:hover {
         color: $navigation-color-hover;
+        text-decoration: underline;
       }
     }
   }
