@@ -1,7 +1,9 @@
 .hero {
   $hero-color: #fff;
   $hero-image: '../img/afeature-background.jpg';
-
+  -webkit-box-shadow: inset 0px 5px 5px 0px rgba(50, 50, 50, 0.1);
+  -moz-box-shadow:    inset 0px 5px 5px 0px rgba(50, 50, 50, 0.1);
+  box-shadow:         inset 0px 5px 5px 0px rgba(50, 50, 50, 0.1);
   @include background(url($hero-image));
   background-position: bottom center;
   background-repeat: no-repeat;
@@ -33,7 +35,7 @@
       .hero-title {
         margin-bottom: 1.25rem;
         font-family: $decorative-font-family;
-        font-size: 3rem;
+        font-size: 2.5rem;
         margin-top: 0;
         font-weight: $font-weight-normal;
         text-shadow:
@@ -43,7 +45,7 @@
         2px 2px 0 $dark-orange;
         text-transform: uppercase;
         @include media($medium-screen-min){
-          font-size: 4rem;
+          font-size: 3.5rem;
         }
       }
       @include media($medium-screen-min){
