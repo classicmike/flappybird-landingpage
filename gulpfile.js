@@ -11,6 +11,8 @@ var rename = require('gulp-rename');
 var source = require('vinyl-source-stream');
 var buffer = require('vinyl-buffer');
 
+var critical = require('critical').stream;
+
 // Javascript linting task
 gulp.task('jshint', function(){
 	return gulp.src('site/js/*.js')
@@ -35,8 +37,9 @@ gulp.task('watch', function() {
 gulp.task('default', ['jshint', 'sass', 'watch']);
 
 // Minify index
-gulp.task('html', function(){
+gulp.task('html', ['styles'], function(){
 	gulp.src('site/index.html')
+    .pipe(critical({base: 'build/', inline: true, minify: true, extract: true, css: ['build/css/styles.css']}))
 	.pipe(minifyHTML())
 	.pipe(gulp.dest('build/'));
 });
@@ -67,6 +70,7 @@ gulp.task('fonts', function(){
 	gulp.src('site/fonts/*/*')
 	.pipe(gulp.dest('build/fonts'));
 });
+
 
 // Build Task
 gulp.task('build', ['jshint', 'sass', 'html', 'scripts', 'styles', 'images', 'fonts']);
