@@ -17,7 +17,7 @@
             return;
         }
 
-        return $('html,body').animate({'scrollTop': position }, 'slow', 'swing').promise();
+        return $('html,body').velocity('scroll', { duration: 200, offset: position }).promise();
 
     };
     /***--------- SCROLL TO Helper ------------ ***/
@@ -41,7 +41,21 @@
 
     app.ScrollToNavigation.SCROLL_TO_NAV_CLASS = 'nav-scrollto';
 
+
+    app.ScrollToAnimation = function(){
+
+    };
+
+
     $(document).ready(function(){
         var scrollToNav = new app.ScrollToNavigation();
     });
+
+
+
+
+
+
+
+
 })(jQuery);
