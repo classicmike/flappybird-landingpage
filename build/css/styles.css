@@ -270,6 +270,9 @@ ol, ul {
 .lead {
   font-size: 1.5rem; }
 
+.scroll-to-animate-element {
+  display: none; }
+
 .vertical-align {
   display: table;
   height: inherit;
@@ -563,7 +566,10 @@ header.navigation {
     .hero .hero-inner .hero-img-container .hero-img {
       width: 60%;
       margin: 0 auto;
-      max-width: 200px; }
+      max-width: 200px;
+      position: relative; }
+      .hero .hero-inner .hero-img-container .hero-img.not-animated {
+        left: -1000rem; }
     @media screen and (min-width: 64rem) {
       .hero .hero-inner .hero-img-container {
         float: left;

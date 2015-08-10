@@ -42,7 +42,7 @@
     <section class="hero">
         <div class="hero-inner">
             <div class="hero-img-container">
-                <img src="img/bird-hero.png" alt="flappy-bird" class="hero-img" />
+                <img id="bird-hero" src="img/bird-hero.png" alt="flappy-bird" class="hero-img not-animated" />
             </div>
             <div class="hero-copy">
                 <h1 class="hero-title">It's Back! FlappyBird<br />remastered for the web!</h1>
@@ -53,7 +53,7 @@
         </div>
     </section>
 
-    <article id="about" class="section">
+    <article id="about" class="section scroll-to-scene">
         <div class="section-header">
             <h2>About</h2>
         </div>
@@ -74,11 +74,11 @@
                 <p>What are you waiting for? Get addicted today!</p>
             </div>
             <div class="section-content-right">
-                <img src="img/screen1.jpeg" alt="Flappy Bird Image" />
+                <img src="img/screen1.jpeg" alt="Flappy Bird Image" class="scroll-to-animate-element" />
             </div>
         </div>
     </article>
-    <article id="how-to-play" class="section backgrounds-bluish-green">
+    <article id="how-to-play" class="section backgrounds-bluish-green scroll-to-scene">
         <div class="section-header">
             <h2>How to Play</h2>
         </div>
@@ -89,25 +89,25 @@
                 <ol class="gallery">
                     <li class="gallery-item">
                         <figure>
-                            <img src="img/how-to-screen-1.jpg" alt="Step 1" class="gallery-item-image" />
+                            <img src="img/how-to-screen-1.jpg" alt="Step 1" class="gallery-item-image scroll-to-animate-element" />
                             <figcaption class="gallery-item-caption">Press the Play Button to Play</figcaption>
                         </figure>
                     </li>
                     <li class="gallery-item">
                         <figure>
-                            <img src="img/how-to-screen-2.jpg" alt="Step 2" class="gallery-item-image" />
+                            <img src="img/how-to-screen-2.jpg" alt="Step 2" class="gallery-item-image scroll-to-animate-element" />
                             <figcaption class="gallery-item-caption">As you click on the game area to make the bird fly higher</figcaption>
                         </figure>
                     </li>
                     <li class="gallery-item">
                         <figure>
-                            <img src="img/how-to-screen-3.jpg" alt="Step 3" class="gallery-item-image" />
+                            <img src="img/how-to-screen-3.jpg" alt="Step 3" class="gallery-item-image scroll-to-animate-element" />
                             <figcaption class="gallery-item-caption">Pass through all of the obstacles to level up!</figcaption>
                         </figure>
                     </li>
                     <li class="gallery-item">
                         <figure>
-                            <img src="img/how-to-screen-4.jpg" alt="Step 4" class="gallery-item-image" />
+                            <img src="img/how-to-screen-4.jpg" alt="Step 4" class="gallery-item-image scroll-to-animate-element" />
                             <figcaption class="gallery-item-caption">When you hit the obstacle it is game over!</figcaption>
                         </figure>
                     </li>
@@ -130,9 +130,13 @@
         <p>Game and Landing Page developed by Mike Tran &lt;frontend&gt;&lt;/developer&gt;. Original iOs game Flappy Bird
             game developed by Dong Nguyen. Note: I will not take responsibility for any cases of addictiveness to the app. :P</p>
     </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script>window.jQuery || document.write('<script src="lib/jquery/dist/jquery.min.js"><\/script>')</script>
-    <script src="http://cdn.jsdelivr.net/velocity/1.2.2/velocity.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="//cdn.jsdelivr.net/velocity/1.2.2/velocity.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.velocity.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/debug.addIndicators.js"></script>
+
+<script src="js/app.js"></script>
 </body>
 </html>

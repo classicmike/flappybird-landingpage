@@ -43,12 +43,76 @@
 
 
     app.ScrollToAnimation = function(){
+        this.setup();
+    };
+
+    app.ScrollToAnimation.prototype.setup = function(){
+        var scrollToElements = $(app.ScrollToAnimation.SCROLL_TO_SELECTOR);
+
+        this.scrollToController = new ScrollMagic.Controller();
+        this.scrollToScenes = [];
+
+        console.log(scrollToElements);
+        var _self = this;
+
+        scrollToElements.each(function(){
+            _self.setupScrollToScene($(this));
+        });
 
     };
 
+    app.ScrollToAnimation.prototype.setupScrollToScene = function(element){
+        var scene = new ScrollMagic.Scene({
+            triggerElement: '#' + element.attr('id'),
+            logLevel: 2,
+            reverse: false
+        }).setVelocity(
+            '#' + element.attr('id') + ' ' +  app.ScrollToAnimation.ELEMENT_TO_ANIMATE,
+            'slideDown',
+            {
+                duration: 500,
+                easing: [100, 10]
+            }
+        ).addTo(this.scrollToController);
+
+        this.scrollToScenes.push(scene);
+    };
+
+    app.ScrollToAnimation.SCROLL_TO_SELECTOR = '.scroll-to-scene';
+    app.ScrollToAnimation.ELEMENT_TO_ANIMATE = '.scroll-to-animate-element';
+
+
+    app.BirdHeroAnimation = function(){
+        // run the bird animation
+        this.setup();
+        this.run();
+    };
+
+    app.BirdHeroAnimation.prototype.setup = function(){
+        this.birdHeroElement = $(app.BirdHeroAnimation.HERO_ID);
+    };
+
+    app.BirdHeroAnimation.prototype.run = function(){
+        this.birdHeroElement.velocity({
+            left: 0
+        }, {
+            duration: 1000,
+            easing: [100, 10],
+            complete: this.markAsAnimated.bind(this)
+        });
+    };
+
+    app.BirdHeroAnimation.prototype.markAsAnimated = function(elements){
+        $(elements[0]).removeClass(app.BirdHeroAnimation.NOT_ANIMATED_CLASS.replace('.', ''));
+    };
+
+    app.BirdHeroAnimation.HERO_ID = '#bird-hero';
+    app.BirdHeroAnimation.NOT_ANIMATED_CLASS = '.not-animated';
 
     $(document).ready(function(){
         var scrollToNav = new app.ScrollToNavigation();
+        var heroBirdAnimation = new app.BirdHeroAnimation();
+        var scrollToAnimation = new app.ScrollToAnimation();
     });
 
 

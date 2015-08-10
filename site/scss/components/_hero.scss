@@ -28,6 +28,10 @@
         width: 60%;
         margin: 0 auto;
         max-width: 200px;
+        position: relative;
+        &.not-animated {
+          left: -1000rem;
+        }
       }
       @include media($medium-screen-min){
         @include span-columns(3);
