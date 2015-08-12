@@ -61,7 +61,7 @@ gulp.task('styles', function(){
 
 // Image optimization task
 gulp.task('images', function(){
-	gulp.src('site/img/*')
+	gulp.src('site/img/**/*')
 	.pipe(imagemin())
 	.pipe(gulp.dest('build/img'));
 });
