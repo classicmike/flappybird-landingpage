@@ -1,10 +1,20 @@
 .hero {
   $hero-color: #fff;
-  $hero-image: '../img/afeature-background.jpg';
+  $hero-image-small: '../img/afeature-background-768.jpg';
+  $hero-image-medium: '../img/afeature-background-1024.jpg';
+  $hero-image-large: '../img/afeature-background.jpg';
   -webkit-box-shadow: inset 0px 5px 5px 0px rgba(50, 50, 50, 0.1);
   -moz-box-shadow:    inset 0px 5px 5px 0px rgba(50, 50, 50, 0.1);
   box-shadow:         inset 0px 5px 5px 0px rgba(50, 50, 50, 0.1);
-  @include background(url($hero-image));
+  background-image: url($hero-image-medium);
+  @include media($small-screen-min){
+    background-image: url($hero-image-medium);
+  }
+  @include media($medium-screen-min){
+    background-image: url($hero-image-large);
+  }
+
+
   background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
