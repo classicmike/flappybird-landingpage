@@ -109,11 +109,42 @@
     app.BirdHeroAnimation.HERO_ID = '#bird-hero';
     app.BirdHeroAnimation.NOT_ANIMATED_CLASS = '.not-animated';
 
+
+    app.NaviagationTimingPane = function(){
+        this.setup();
+    };
+
+    app.NaviagationTimingPane.prototype.setup = function(){
+        window.addEventListener('load', this.showTimings.bind(this));
+    };
+
+    app.NaviagationTimingPane.prototype.showTimings = function(){
+        setTimeout(function(){
+            var timings = window.performance.timing;
+
+            var start = timings.navigationStart;
+            var list = $('<ul></ul>');
+            for(var timing in timings){
+                if((timings[timing]) !== 0){
+                    list.append('<li>' + timing + ': <span class="value">' + (timings[timing] - start) + 'ms</span></li>');
+                }
+            }
+
+            $('#navigation-timing-pane').append(list);
+        }, 0);
+
+    };
+
+
+
     $(document).ready(function(){
         var scrollToNav = new app.ScrollToNavigation();
         var heroBirdAnimation = new app.BirdHeroAnimation();
         var scrollToAnimation = new app.ScrollToAnimation();
+        var navigationTimingPane = new app.NaviagationTimingPane();
     });
+
+
 
 
 
