@@ -237,6 +237,22 @@ img {
   max-width: 100%;
   display: inline-block; }
 
+.debug-overlay {
+  z-index: 10000;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  border: 1px solid #000;
+  background-color: #fff;
+  padding: 1.25rem; }
+  .debug-overlay ul {
+    margin: 0; }
+  .debug-overlay * {
+    font-weight: 700; }
+  .debug-overlay .value {
+    font-weight: 400; }
+
 h1, h2, h3, h4, h5, h6 {
   font-weight: 400;
   font-family: "flappybird", "Open Sans", sans-serif;

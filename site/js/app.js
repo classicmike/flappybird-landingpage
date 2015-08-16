@@ -110,16 +110,27 @@
     app.BirdHeroAnimation.NOT_ANIMATED_CLASS = '.not-animated';
 
 
-    app.NaviagationTimingPane = function(){
+    app.NavigationTimingPane = function(){
         this.setup();
+        this.setEvents();
     };
 
-    app.NaviagationTimingPane.prototype.setup = function(){
-        window.addEventListener('load', this.showTimings.bind(this));
+    app.NavigationTimingPane.prototype.setup = function(){
+        this.element = $(app.NavigationTimingPane.NAVIGATION_TIMING_PANE_ELEMENT_ID);
     };
 
-    app.NaviagationTimingPane.prototype.showTimings = function(){
-        setTimeout(function(){
+    app.NavigationTimingPane.prototype.setEvents = function(){
+        window.addEventListener('load', this.run.bind(this));
+    };
+
+    app.NavigationTimingPane.prototype.run = function(){
+        setTimeout(this.showTimings.bind(this), 0);
+    };
+
+    app.NavigationTimingPane.prototype.showTimings = function(){
+        if(!window.performance.timing){
+            this.element.append('<p>' + app.NavigationTimingPane.ERROR_MESSAGE + '</p>');
+        } else {
             var timings = window.performance.timing;
 
             var start = timings.navigationStart;
@@ -130,18 +141,19 @@
                 }
             }
 
-            $('#navigation-timing-pane').append(list);
-        }, 0);
-
+            this.element.append(list);
+        }
     };
 
+    app.NavigationTimingPane.NAVIGATION_TIMING_PANE_ELEMENT_ID = '#navigation-timing-pane';
+    app.NavigationTimingPane.ERROR_MESSAGE = 'Unfortunately Navigation Timing API is not supported by your browser';
 
 
     $(document).ready(function(){
         var scrollToNav = new app.ScrollToNavigation();
         var heroBirdAnimation = new app.BirdHeroAnimation();
         var scrollToAnimation = new app.ScrollToAnimation();
-        var navigationTimingPane = new app.NaviagationTimingPane();
+        var navigationTimingPane = new app.NavigationTimingPane();
     });
 
 
